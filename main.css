@@ -1,0 +1,189 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.page_container {
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10%;
+  max-width: 500px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  height: 100px;
+  width: 100px;
+}
+
+.header_text {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+@media (min-width: 500px) {
+  .header_text {
+    font-size: 2em;
+  }
+}
+
+.checkboxes {
+  margin-top: 40px;
+}
+
+.checkboxes_label {
+  margin-bottom: 16px;
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.checkboxes .checkbox {
+  padding: 6px 0px;
+}
+
+.checkbox_input {
+  display: none;
+}
+
+.checkbox_label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox_label_box {
+  position: relative;
+  flex-shrink: 0;
+  height: 20px;
+  width: 20px;
+
+  border: solid 1px #bbb;
+  border-radius: 2px;
+
+  margin-right: 10px;
+}
+
+.checkbox_input:checked + .checkbox_label .checkbox_label_box {
+  background-color: #fe6969;
+  border-color: #fe6969;
+}
+
+.checkbox_input:checked + .checkbox_label .checkbox_label_box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 5px;
+  width: 8px;
+  height: 13px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox_label_text {
+  font-size: 1.2em;
+}
+
+.form_group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form_group__vertical {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form_group_label {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-right: 15px;
+}
+
+.form_group_input {
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  outline: none;
+  height: 30px;
+  width: 40px;
+
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+.form_group_input::-moz-placeholder {
+  color: #bbb;
+}
+
+.form_group_input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.form_group_input::placeholder {
+  color: #bbb;
+}
+
+.form_group_paragraph {
+  font-size: 1.1em;
+}
+
+.form_button {
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .form_button {
+    margin-top: 80px;
+  }
+}
+
+.form_button_button {
+  background-color: #fe6969;
+  border: none;
+  border-radius: 5px;
+  color: black;
+
+  height: 50px;
+  width: 70%;
+
+  font-size: 1.2em;
+
+  cursor: pointer;
+}
+
+.form_button_button:hover {
+  background-color: #fd5757;
+}
+
+.form_button_button:active {
+  background-color: #fd5050;
+}
+
+.form_button_button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
