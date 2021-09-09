@@ -61,8 +61,8 @@ function onRecommendationRequested(event) {
   const reason = reasons.length == 1
     ? reasons[0]
     : reasons.length == 2
-      ? reasons.join(' и ')
-      : `${reasons[0]}, ${reasons[1]} и ${reasons[2]}`;
+      ? `комбинации ${reasons.join(' и ')}`
+      : `комбинации ${reasons[0]}, ${reasons[1]} и ${reasons[2]}`;
       
 
   const prostheticMitralValveIsSelected = prostheticMitralValve.is(':checked');
