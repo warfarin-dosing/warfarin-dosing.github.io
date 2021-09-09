@@ -17,9 +17,6 @@ body {
 }
 
 .page_content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   margin: 10%;
   max-width: 500px;
 }
@@ -138,6 +135,7 @@ body {
 
 .form_group_paragraph {
   font-size: 1.1em;
+  max-width: 500px;
 }
 
 .form_button {

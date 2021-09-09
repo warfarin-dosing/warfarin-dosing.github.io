@@ -79,7 +79,7 @@ function onRecommendationRequested(event) {
     <div class="form_group form_group__vertical">
       <label class="form_group_label">Рекомендация:</label>
       <p class="form_group_paragraph">
-        Целевые значения MHO в случае ${reason}: <b>${lowerMHOBound} - ${upperMHOBound}</b>.<br /><br />
+        Целевые значения MHO в случае ${reason}: <b>${lowerMHOBound}&nbsp;-&nbsp;${upperMHOBound}</b>.<br /><br />
         Уровень MHO равный <b>${MHOValueProvided}</b> ${recommendation}.
       </p>
     </div>
@@ -91,4 +91,5 @@ function onRecommendationRequested(event) {
 $(function () {
   initSelectors();
   initEventListeners();
+  checkAbilityToRequestRecommendations();
 });
