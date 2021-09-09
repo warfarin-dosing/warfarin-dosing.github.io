@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "npx webpack serve",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "license": "MIT",
   "devDependencies": {
