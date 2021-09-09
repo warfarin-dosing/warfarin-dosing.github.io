@@ -24,7 +24,7 @@ function initEventListeners() {
   atrialFibrillationCheckbox.on("change", checkAbilityToRequestRecommendations);
   prostheticAorticValve.on("change", checkAbilityToRequestRecommendations);
   prostheticMitralValve.on("change", checkAbilityToRequestRecommendations);
-  MHOValue.on("input", checkAbilityToRequestRecommendations);
+  MHOValue.on("propertychange input", checkAbilityToRequestRecommendations);
 
   recommendationForm.on("submit", onRecommendationRequested);
 }

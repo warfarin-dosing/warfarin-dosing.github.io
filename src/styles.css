@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 10%;
+  margin: 10%;
   max-width: 500px;
 }
 
@@ -35,9 +35,15 @@ body {
 }
 
 .header_text {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
   margin-left: 25px;
+}
+
+@media (min-width: 500px) {
+  .header_text {
+    font-size: 2em;
+  }
 }
 
 .checkboxes {
@@ -66,6 +72,7 @@ body {
 
 .checkbox_label_box {
   position: relative;
+  flex-shrink: 0;
   height: 20px;
   width: 20px;
 
@@ -94,7 +101,6 @@ body {
 }
 
 .checkbox_label_text {
-  line-height: 0;
   font-size: 1.2em;
 }
 
@@ -135,15 +141,22 @@ body {
 }
 
 .form_button {
-  margin-top: 80px;
+  margin-top: 40px;
   text-align: center;
   width: 100%;
+}
+
+@media (min-width: 500px) {
+  .form_button {
+    margin-top: 80px;
+  }
 }
 
 .form_button_button {
   background-color: #fe6969;
   border: none;
   border-radius: 5px;
+  color: black;
 
   height: 50px;
   width: 70%;
@@ -151,6 +164,14 @@ body {
   font-size: 1.2em;
 
   cursor: pointer;
+}
+
+.form_button_button:hover {
+  background-color: #fd5757;
+}
+
+.form_button_button:active {
+  background-color: #fd5050;
 }
 
 .form_button_button:disabled {
