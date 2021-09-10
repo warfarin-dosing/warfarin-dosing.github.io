@@ -138,6 +138,16 @@ body {
   max-width: 500px;
 }
 
+.form_group_hint {
+  margin: 0;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.form_group_hint_link {
+  color: inherit;
+}
+
 .form_button {
   margin-top: 40px;
   text-align: center;

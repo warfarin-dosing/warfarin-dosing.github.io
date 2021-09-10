@@ -71,16 +71,29 @@ function onRecommendationRequested(event) {
 
   const recommendation = MHOValueProvided < lowerMHOBound
     ? 'ниже целевого, из-за чего повышен риск образования кровяных сгустков. Рекомендуется <b>повысить</b> дозу Варфарина'
-    : MHOValueProvided > upperMHOBound
-      ? 'выше целевого, из-за чего повышен риск кровотечений. Рекомендуется <b>снизить</b> дозу Варфарина'
-      : 'внутри целевого диапазона';
+    : MHOValueProvided > 6
+      ? 'критически выше целевого. <b>Высокий риск развития кровотечения, рекомендовано срочно обратиться к своему лечащему врачу</b>'
+      : MHOValueProvided > upperMHOBound
+        ? 'выше целевого, из-за чего повышен риск кровотечений. Рекомендуется <b>снизить</b> дозу Варфарина'
+        : 'внутри целевого диапазона';
 
   const text = `
     <div class="form_group form_group__vertical">
       <label class="form_group_label">Рекомендация:</label>
       <p class="form_group_paragraph">
         Целевые значения MHO в случае ${reason}: <b>${lowerMHOBound}&nbsp;-&nbsp;${upperMHOBound}</b>.<br /><br />
-        Уровень MHO равный <b>${MHOValueProvided}</b> ${recommendation}.
+        Уровень MHO равный <b>${MHOValueProvided}</b> ${recommendation}.*
+      </p>
+
+      <p class="form_group_hint">
+        * 
+        <a
+          class="form_group_hint_link"
+          href="https://scardio.ru/content/Guidelines/valves_7_rkj_2018.pdf"
+          target=”_blank”
+        >
+          Рекомендации ESC/EACTS по лечению клапанной болезни сердца
+        </a>
       </p>
     </div>
   `;
