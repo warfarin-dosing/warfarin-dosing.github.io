@@ -45,6 +45,7 @@ module.exports = {
       logo: './src/assets/heart.svg',
       inject: htmlPlugin => 
         basename(htmlPlugin.options.filename) === 'index.html',
+      manifest: './src/manifest.json',
     }),
     new CopyPlugin({
       patterns: [

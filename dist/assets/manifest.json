@@ -1,9 +1,9 @@
 {
-  "name": "warfarin-dosing",
-  "short_name": "warfarin-dosing",
+  "name": "Контроль дозировки Варфарина",
+  "short_name": "Контроль Варфарина",
   "description": "",
   "dir": "auto",
-  "lang": "en-US",
+  "lang": "ru-RU",
   "display": "standalone",
   "orientation": "any",
   "start_url": "/?homescreen=1",
