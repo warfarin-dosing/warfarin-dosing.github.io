@@ -1,6 +1,5 @@
 html,
 body {
-  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -13,11 +12,12 @@ body {
 
 .page_container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page_content {
-  margin: 10%;
+  margin: 10% 10% 5%;
   max-width: 500px;
 }
 
@@ -185,4 +185,8 @@ body {
 .form_button_button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+.contact_link_container {
+  margin: 20px;
 }
